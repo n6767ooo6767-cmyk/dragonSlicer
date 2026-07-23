@@ -1,62 +1,41 @@
-// 🧊 NovaSlicer STL Loader v0.0.1
+import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js";
+import { STLLoader } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/STLLoader.js";
 
-export function loadSTL(file, scene) {
+export async function loadSTL(file, scene) {
 
-    const loader = new THREE.STLLoader();
+    const loader = new STLLoader();
 
+    const buffer = await file.arrayBuffer();
 
-    const reader = new FileReader();
+    const geometry = loader.parse(buffer);
 
+    geometry.computeVertexNormals();
 
-    reader.onload = function(event) {
+    const material = new THREE.MeshStandardMaterial({
+        color: 0x8b5cff,
+        metalness: 0.15,
+        roughness: 0.6
+    });
 
-        const geometry = loader.parse(
-            event.target.result
-        );
+    const mesh = new THREE.Mesh(
+        geometry,
+        material
+    );
 
+    // Центрируем модель
+    geometry.computeBoundingBox();
 
-        geometry.computeVertexNormals();
+    const box = geometry.boundingBox;
 
+    const center = new THREE.Vector3();
 
-        const material = new THREE.MeshStandardMaterial({
+    box.getCenter(center);
 
-            color: 0x8b5cff,
+    mesh.position.sub(center);
 
-            metalness: 0.2,
+    scene.add(mesh);
 
-            roughness: 0.5
+    console.log("✅ STL loaded:", file.name);
 
-        });
-
-
-        const model = new THREE.Mesh(
-            geometry,
-            material
-        );
-
-
-        // размер и положение
-        model.scale.set(
-            0.01,
-            0.01,
-            0.01
-        );
-
-
-        model.rotation.x = -Math.PI / 2;
-
-
-        scene.add(model);
-
-
-        console.log(
-            "✅ STL loaded:",
-            file.name
-        );
-
-    };
-
-
-    reader.readAsArrayBuffer(file);
-
+    return mesh;
 }
