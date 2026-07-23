@@ -1,0 +1,119 @@
+/* 🚀 NovaSlicer v0.0.1 */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #101018;
+    color: white;
+}
+
+
+/* Верхняя часть */
+
+header {
+    text-align: center;
+    padding: 30px;
+    background: #171725;
+    border-bottom: 2px solid #333;
+}
+
+
+header h1 {
+    font-size: 48px;
+    margin: 0;
+    background: linear-gradient(
+        90deg,
+        #ff4fd8,
+        #8b5cff,
+        #00d9ff,
+        #ffe600
+    );
+
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+header p {
+    color: #aaa;
+}
+
+
+/* Основные блоки */
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 25px;
+}
+
+
+section {
+    background: #1d1d2b;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px #000;
+}
+
+
+h2 {
+    color: #8ee7ff;
+}
+
+
+/* Кнопки */
+
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #8b5cff,
+        #00d9ff
+    );
+
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    transform: scale(1.05);
+}
+
+
+/* 3D место */
+
+.viewer {
+    text-align: center;
+}
+
+
+.cube {
+    font-size: 100px;
+    padding: 50px;
+}
+
+
+/* Настройки */
+
+select {
+    background: #101018;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+
+/* Низ сайта */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+}
