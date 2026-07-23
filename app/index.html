@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaSlicer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🚀 NovaSlicer</h1>
+        <p>Next generation 3D printing software</p>
+    </header>
+
+    <main>
+
+        <section class="panel">
+            <h2>🧊 Model</h2>
+
+            <input type="file" id="modelFile" accept=".stl,.obj,.3mf">
+
+            <button>
+                🔪 Slice Model
+            </button>
+        </section>
+
+
+        <section class="viewer">
+            <h2>3D Preview</h2>
+
+            <div class="cube">
+                🧊
+            </div>
+        </section>
+
+
+        <section class="settings">
+            <h2>⚙️ Print Settings</h2>
+
+            <label>
+                Layer height:
+                <select>
+                    <option>0.12 mm</option>
+                    <option selected>0.20 mm</option>
+                    <option>0.28 mm</option>
+                </select>
+            </label>
+
+            <br><br>
+
+            <label>
+                Material:
+                <select>
+                    <option>Rainbow Silk PLA</option>
+                    <option>Gray PLA</option>
+                </select>
+            </label>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        🐉 NovaSlicer Project © 2026
+    </footer>
+
+
+</body>
+</html>
