@@ -1,0 +1,175 @@
+/* 🚀 NovaSlicer Website v0.0.1 */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0b12;
+    color: white;
+}
+
+
+/* Шапка */
+
+header {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background:
+        radial-gradient(circle, #252545, #0b0b12);
+}
+
+
+header h1 {
+
+    font-size: 70px;
+    margin: 0;
+
+    background: linear-gradient(
+        90deg,
+        #ff4fd8,
+        #8b5cff,
+        #00d9ff,
+        #ffe600
+    );
+
+    -webkit-background-clip: text;
+    color: transparent;
+
+}
+
+
+header p {
+    font-size: 22px;
+    color: #aaa;
+}
+
+
+/* Кнопки */
+
+button,
+header a {
+
+    margin-top: 25px;
+
+    padding: 15px 35px;
+
+    border-radius: 30px;
+
+    border: none;
+
+    text-decoration: none;
+
+    color: white;
+
+    background: linear-gradient(
+        90deg,
+        #8b5cff,
+        #00d9ff
+    );
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+button:hover,
+header a:hover {
+
+    transform: scale(1.08);
+
+}
+
+
+/* Секции */
+
+section {
+
+    padding: 60px 10%;
+
+    text-align: center;
+
+}
+
+
+h2 {
+
+    font-size: 40px;
+
+    color: #8ee7ff;
+
+}
+
+
+/* Карточки */
+
+.features {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.features div {
+
+    width: 260px;
+
+    padding: 25px;
+
+    background: #171725;
+
+    border-radius: 20px;
+
+    box-shadow: 0 0 25px #000;
+
+    transition: 0.3s;
+
+}
+
+
+.features div:hover {
+
+    transform: translateY(-10px);
+
+}
+
+
+/* Текст */
+
+p {
+
+    line-height: 1.6;
+
+}
+
+
+/* Низ */
+
+footer {
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: #888;
+
+    border-top: 1px solid #222;
+
+}
