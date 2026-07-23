@@ -1,3 +1,6 @@
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script type="module" src="script.js"></script>
+
 // 🚀 NovaSlicer v0.0.1
 
 const fileInput = document.getElementById("modelFile");
