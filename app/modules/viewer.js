@@ -8,6 +8,13 @@ export function createViewer() {
 
     const scene = new THREE.Scene();
 
+    const ambient = new THREE.AmbientLight(0xffffff, 1.5);
+scene.add(ambient);
+
+const dir = new THREE.DirectionalLight(0xffffff, 2);
+dir.position.set(5,5,5);
+scene.add(dir);
+
     const camera = new THREE.PerspectiveCamera(
         45,
         window.innerWidth / window.innerHeight,
